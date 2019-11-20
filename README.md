@@ -1,7 +1,8 @@
 # SpikeAnalyzer
 MATLAB tool to detect unphysiological spikes in fMRI times series (uses SPM functions)
 
-RATIONALE 
+## RATIONALE 
+
 Spike Analyzer is a program to help you to detect (unnatural) spike
 (outliers) in an EPI time series. It is NOT a replacement for visual
 inspection, but it'll help you in selecting certain suspicious scan for
@@ -58,7 +59,7 @@ SPM.Sess(1).C.name = repmat({'BS'},1,size(SPM.Sess(1).C.C,2));
 (since one is usually not interested in looking at the effect of a single
 nuisance regressor, they are all assigned the same name (BS = bad scan))
 
-EXPLANATION OF PLOTS (from top to bottom)
+## EXPLANATION OF PLOTS (from top to bottom)
 
 1. and 2. Normalized Global activity and 1st derivative of global
    activity (gray) 
@@ -86,7 +87,7 @@ EXPLANATION OF PLOTS (from top to bottom)
 7. Normalized Global Activity with effects of movement parameters removed
    (by multiple linear regression)
 
-SOME TECHNICAL INFORMATION
+## SOME TECHNICAL INFORMATION
 
 Spike Analyzer used to compute the global mean exclusively using 
 spm_global. However, several test and simulations have revealed that 
